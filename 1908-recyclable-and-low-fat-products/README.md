@@ -44,3 +44,7 @@ Products table:
 +-------------+
 <strong>Explanation:</strong> Only products 1 and 3 are both low fat and recyclable.
 </pre>
+
+> Notes
+- 텍스트를 작성할 때 따옴표로 감싸주는 것을 잊지말자.
+- 참고로 Oracle 에서는 큰 따옴표("") = 컬럼명, 작은 따옴표('') = 문자열 이다.
