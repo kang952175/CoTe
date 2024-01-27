@@ -78,3 +78,17 @@ Customer with id = 54 visited the mall three times. During 2 visits they did not
 Customer with id = 96 visited the mall once and did not make any transactions.
 As we can see, users with IDs 30 and 96 visited the mall one time without making any transactions. Also, user 54 visited the mall twice and did not make any transactions.
 </pre>
+
+### Notes
+
+> 행의 개수 세기
+---
+
+- COUNT(*) = 모든 ROW 
+- COUNT(<컬럼명>) = 컬럼 중 값이 있는 ROW
+
+> NULL을 세는 방법
+---
+
+- 테이블 자체에서 NULL을 센다면 COUNT(*) - COUNT(<컬럼명>)
+- Join 테이블에서 NULL을 센다면 WHERE <컬럼명> IS NULL로 불러와서 COUNT(*)을 해준다.
