@@ -74,12 +74,13 @@ From sale_id = 2, we can conclude that Nokia was sold for 5000 in the year 2009.
 From sale_id = 7, we can conclude that Apple was sold for 9000 in the year 2011.
 </pre>
 
-Notes
+### Notes
 
 `AS`를 사용하여 Alias를 붙여 가독성을 높인다.
 
 > SQL Aliasing Convention
 ---
+
 - 별칭을 붙이는 개체 또는 표현과 어떤 식으로든 관련있어야 한다.
 - 일반적으로 correlation이름은 개체 이름에 포함된 각 단어의 첫 글자가 되어야 한다.
 - 이미 같은 이름의 correlation이 있는 경우, 번호를 붙인다.
