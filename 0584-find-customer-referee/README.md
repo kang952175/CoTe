@@ -46,3 +46,6 @@ Customer table:
 | Zack |
 +------+
 </pre>
+
+Notes
+- DataType이 NULL이라면 Data가 Unknown or no data라는 의미이고 별도의 처리가 필요로합니다.
