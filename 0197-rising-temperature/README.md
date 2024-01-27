@@ -46,3 +46,27 @@ Weather table:
 In 2015-01-02, the temperature was higher than the previous day (10 -&gt; 25).
 In 2015-01-04, the temperature was higher than the previous day (20 -&gt; 30).
 </pre>
+
+### Notes
+> window 을 비교하는 방법 (날짜 차이 아는 방법)
+
+- 같은 테이블을 LEFT JOIN하고, ON <조건문>에서 날짜 간격이 차이나게 조인한다.
+- 그리고 WHERE <조건문>을 이용하여 온도를 비교하면 된다.
+
+> Example
+
+```sql
+SELECT *
+FROM Weather AS w1
+LEFT JOIN Weather AS w2
+ON w1.recordDate=DATE_ADD(w2.recordDate, INTERVAL 1 DAY);
+```
+Output:
+```text
+| id | recordDate | temperature | id   | recordDate | temperature |
+| -- | ---------- | ----------- | ---- | ---------- | ----------- |
+| 1  | 2015-01-01 | 10          | null | null       | null        |
+| 2  | 2015-01-02 | 25          | 1    | 2015-01-01 | 10          |
+| 3  | 2015-01-03 | 20          | 2    | 2015-01-02 | 25          |
+| 4  | 2015-01-04 | 30          | 3    | 2015-01-03 | 20          |
+```
