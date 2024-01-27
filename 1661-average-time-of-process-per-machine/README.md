@@ -100,6 +100,7 @@ Output
 | 2          | 1          | start         | 2.5       | 2          | 1          | end           | 5         |
 ```
 결과적으로 필요한 테이블은 다음과 같다.
+
 Code
 ```sql
 select a1.machine_id, a1.timestamp, a2.timestamp
