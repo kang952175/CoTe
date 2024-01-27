@@ -47,3 +47,11 @@ Views table:
 | 7    |
 +------+
 </pre>
+
+Notes
+
+> 쿼리 작성 순서 :
+- SELECT - FROM - WHERE - GROUP BY - HAVING - ORDER BY
+
+> 쿼리 실행 순서 :
+- FROM - WHERE - GROUP BY - HAVING - SELECT - ORDER BY
