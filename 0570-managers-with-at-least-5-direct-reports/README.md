@@ -46,3 +46,11 @@ Employee table:
 | John |
 +------+
 </pre>
+
+### Notes
+
+한 id에 매칭되는 항목 개수 세는 방법
+
+- INNER JOIN : 두 테이블에 모두 지정한 열의 데이터가 있어야 한다.
+- GROUP BY를 하면 Having에서 항목의 개수를 셀 수 있다.
+
