@@ -111,3 +111,37 @@ Bob attended the Math exam 1 time, the Programming exam 1 time, and did not atte
 Alex did not attend any exams.
 John attended the Math exam 1 time, the Physics exam 1 time, and the Programming exam 1 time.
 </pre>
+
+### Notes
+
+cross join
+- cross join : 두 테이블의 모든 행을 조인하는 기능
+- 조인된 테이블의 전체 행 개수는 두 테이블의 각 행의 개수를 곱한 수만큼 됩니다.
+
+> cross join Example
+ 
+code
+```sql
+SELECT st.student_id,
+    st.student_name,
+    sb.subject_name
+FROM Students AS st
+CROSS JOIN Subjects AS sb;
+```
+output
+```text
+| student_id | student_name | subject_name |
+| ---------- | ------------ | ------------ |
+| 1          | Alice        | Programming  |
+| 1          | Alice        | Physics      |
+| 1          | Alice        | Math         |
+| 2          | Bob          | Programming  |
+| 2          | Bob          | Physics      |
+| 2          | Bob          | Math         |
+| 13         | John         | Programming  |
+| 13         | John         | Physics      |
+| 13         | John         | Math         |
+| 6          | Alex         | Programming  |
+| 6          | Alex         | Physics      |
+| 6          | Alex         | Math         |
+```
