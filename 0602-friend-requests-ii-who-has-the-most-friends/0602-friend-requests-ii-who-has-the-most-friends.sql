@@ -1,4 +1,4 @@
-with friends_count AS ()(SELECT requester_id AS id, COUNT(requester_id) AS count
+with friends_count AS ((SELECT requester_id AS id, COUNT(requester_id) AS count
     FROM RequestAccepted
     GROUP BY requester_id)
 UNION ALL
