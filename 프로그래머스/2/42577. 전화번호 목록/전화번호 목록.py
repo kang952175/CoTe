@@ -1,6 +1,10 @@
 def solution(phone_book):
-    phone_book.sort()  
-    for i in range(len(phone_book) - 1):
-        if phone_book[i] == phone_book[i+1][:len(phone_book[i])]:
-            return False  
-    return True  
+    hash_map = dict.fromkeys(phone_book, 1)
+    for phone_number in phone_book:
+        temp = ""
+        for number in phone_number:
+            temp += number
+            # temp가 hash_map에 존재하고, temp가 현재의 phone_number가 아닌 경우
+            if temp in hash_map and temp != phone_number:
+                return False  
+    return True 
